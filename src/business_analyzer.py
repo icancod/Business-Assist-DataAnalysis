@@ -58,7 +58,7 @@ class BusinessMetricsAnalyzer:
                         metric_column: str = 'revenue') -> pd.DataFrame:
         """Analyze metrics by business segment."""
         if segment_column not in self.data.columns:
-            raise ValueError(f"Column '{segment_column}' not found")
+            raise ValueError(f"Column '{segment_column}' not found in data")
             
         segment_stats = self.data.groupby(segment_column).agg({
             metric_column: ['sum', 'mean', 'count', 'std']
