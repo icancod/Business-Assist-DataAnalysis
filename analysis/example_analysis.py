@@ -57,7 +57,7 @@ def main():
     # Growth rate analysis
     print("\n\nMonthly Growth Rate:")
     print("-" * 40)
-    growth = analyzer.calculate_growth_rate('date', 'revenue', 'M')
+    growth = analyzer.calculate_growth_rate('date', 'revenue', 'ME')
     print(growth.tail(12))  # Last 12 months
     
     # Create visualizations

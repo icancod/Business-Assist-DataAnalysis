@@ -13,7 +13,24 @@ This is the data analysis toolkit to support the Business Buddy project. It prov
 
 ## 🚀 Quick Start
 
-### Installation
+### Quick Setup (Recommended)
+
+**Unix/Linux/MacOS:**
+```bash
+bash setup.sh
+```
+
+**Windows:**
+```bash
+python setup.py
+```
+
+This will automatically:
+- Install all required dependencies
+- Generate sample data for testing
+- Set up the project structure
+
+### Manual Installation
 
 1. Clone the repository:
 ```bash

@@ -32,8 +32,14 @@ class BusinessMetricsAnalyzer:
     
     def calculate_growth_rate(self, date_column: str = 'date', 
                              value_column: str = 'revenue',
-                             period: str = 'M') -> pd.DataFrame:
-        """Calculate growth rate over time."""
+                             period: str = 'ME') -> pd.DataFrame:
+        """Calculate growth rate over time.
+        
+        Args:
+            date_column: Column name containing dates
+            value_column: Column name containing values to analyze
+            period: Resampling period ('ME' for month-end, 'QE' for quarter-end, 'YE' for year-end)
+        """
         df = self.data.copy()
         df[date_column] = pd.to_datetime(df[date_column])
         df = df.set_index(date_column)
